@@ -249,6 +249,23 @@ footer a:last-child {
     margin-left: 10px;
   }
 }
+  /* MOBILE: Always show service descriptions */
+@media (max-width: 768px) {
+  .card {
+    max-height: none;
+    height: auto;
+    cursor: default;
+  }
+
+  .card p {
+    opacity: 1;
+  }
+
+  .card:hover {
+    transform: none;
+    max-height: none;
+  }
+}
 </style>
 </head>
 
