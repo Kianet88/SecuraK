@@ -8,7 +8,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Montserrat',sans-serif;}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
 
 body {
   line-height: 1.6;
@@ -20,97 +25,229 @@ body {
 }
 
 /* HEADER */
-header{
-  display:flex;justify-content:space-between;align-items:center;
-  padding:20px 40px;background:rgba(4,12,24,0.75);backdrop-filter:blur(6px);
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: rgba(4,12,24,0.75);
+  backdrop-filter: blur(6px);
 }
-header h1{color:#FAFAD2;font-weight:700;}
-nav a{margin-left:20px;color:#dce7ef;text-decoration:none;transition:0.3s;}
-nav a:hover{color:#FAFAD2;}
+
+header h1 {
+  color: #FAFAD2;
+  font-weight: 700;
+}
+
+nav a {
+  margin-left: 20px;
+  color: #dce7ef;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #FAFAD2;
+}
 
 /* SECTIONS */
-section{padding:90px 15px;text-align:center;}
-
-.hero h2{font-size:3rem;margin-bottom:20px;color:#FAFAD2;}
-.hero p{max-width:650px;margin:auto;margin-bottom:35px;color:#dce7ef;opacity:0.9;}
-.hero button{
-  padding:15px 32px;background:#FAFAD2;border:none;color:#00171f;font-weight:600;border-radius:8px;
-  transition:0.3s;
+section {
+  padding: 90px 15px;
+  text-align: center;
 }
-.hero button:hover{background:#FAFAD2;}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #FAFAD2;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: auto;
+  margin-bottom: 35px;
+  color: #dce7ef;
+  opacity: 0.9;
+}
+
+.hero button {
+  padding: 15px 32px;
+  background: #FAFAD2;
+  border: none;
+  color: #00171f;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero button:hover {
+  background: #0096a3;
+  color: white;
+}
 
 /* SERVICES */
-.services h3, .contact h3{color:#FAFAD2;font-size:2.4rem;margin-bottom:45px;}
+.services h3,
+.contact h3 {
+  color: #FAFAD2;
+  font-size: 2.4rem;
+  margin-bottom: 45px;
+}
 
-.service-cards{display:flex;flex-wrap:wrap;justify-content:center;gap:32px;}
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+}
 
-.card{
-  background:rgba(14,25,40,0.75);
-  backdrop-filter:blur(8px);
-  padding:28px;
-  width:290px;
-  border-radius:12px;
-  cursor:pointer;
+.card {
+  background: rgba(14,25,40,0.75);
+  backdrop-filter: blur(8px);
+  padding: 28px;
+  width: 290px;
+  border-radius: 12px;
+  cursor: pointer;
   transition:
     transform .35s ease,
     box-shadow .45s ease,
     background .35s ease,
     border-color .45s ease;
-  border:1px solid rgba(0,224,214,0.15);
-  text-align:left;
-  overflow:hidden;
-  max-height:120px;
+  border: 1px solid rgba(0,224,214,0.15);
+  text-align: left;
+  overflow: hidden;
+  max-height: 120px;
 }
 
-.card:hover{
-  transform:translateY(-8px) scale(1.03);
-  background:rgba(14,25,40,0.90);
-
-  /* Soft glow */
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  background: rgba(14,25,40,0.90);
   box-shadow:
     0 0 12px rgba(0,224,214,0.20),
     0 0 28px rgba(0,224,214,0.25);
-  border-color:rgba(0,224,214,0.45);
-
-  max-height:500px;
+  border-color: rgba(0,224,214,0.45);
+  max-height: 500px;
 }
 
-.card h4{
-  color:#FAFAD2;
-  margin-bottom:8px;
+.card h4 {
+  color: #FAFAD2;
+  margin-bottom: 8px;
 }
 
-.card p{
-  opacity:0;
-  margin-top:8px;
-  color:#dce7ef;
-  line-height:1.5;
-  transition:opacity .35s ease-in-out;
+.card p {
+  opacity: 0;
+  margin-top: 8px;
+  color: #dce7ef;
+  line-height: 1.5;
+  transition: opacity .35s ease-in-out;
 }
 
-.card:hover p{
-  opacity:1;
+.card:hover p {
+  opacity: 1;
 }
-
 
 /* CONTACT FORM */
-.contact form{max-width:500px;margin:auto;display:flex;flex-direction:column;gap:18px;}
-.contact input,.contact textarea{
-  padding:15px;border-radius:8px;border:none;font-size:1rem;
-  background:rgba(255,255,255,0.9);color:#00171f;
+.contact form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
-.contact button{
-  padding:15px;background:#FAFAD2;border:none;border-radius:8px;font-weight:600;color:#00171f;
-  transition:0.3s;
+
+.contact input,
+.contact textarea {
+  padding: 15px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  background: rgba(255,255,255,0.9);
+  color: #00171f;
 }
-.contact button:hover{background:#0096a3;}
+
+.contact input:focus,
+.contact textarea:focus {
+  outline: 2px solid #FAFAD2;
+}
+
+.contact button {
+  padding: 15px;
+  background: #FAFAD2;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #00171f;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact button:hover {
+  background: #0096a3;
+  color: white;
+}
+
+/* STATUS MESSAGE */
+#form-status {
+  max-width: 500px;
+  margin: 20px auto 0;
+  padding: 12px;
+  border-radius: 8px;
+  display: none;
+}
+
+#form-status.success {
+  display: block;
+  background: rgba(0, 180, 120, 0.2);
+  border: 1px solid rgba(0, 220, 150, 0.5);
+  color: #d8fff0;
+}
+
+#form-status.error {
+  display: block;
+  background: rgba(200, 50, 50, 0.2);
+  border: 1px solid rgba(255, 80, 80, 0.5);
+  color: #ffdede;
+}
 
 /* FOOTER */
-footer{text-align:center;padding:20px;background:rgba(4,12,24,0.75);color:#6b8a99;font-size:0.9rem;}
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(4,12,24,0.75);
+  color: #dce7ef;
+  font-size: 0.9rem;
+}
 
-@media(max-width:768px){
-  .hero h2{font-size:2.4rem;}
-  .service-cards{flex-direction:column;align-items:center;}
+footer a {
+  color: #dce7ef;
+  text-decoration: none;
+  margin-right: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+footer a:last-child {
+  margin-right: 0;
+}
+
+@media(max-width:768px) {
+  .hero h2 {
+    font-size: 2.4rem;
+  }
+
+  .service-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header {
+    padding: 20px;
+  }
+
+  nav a {
+    margin-left: 10px;
+  }
 }
 </style>
 </head>
@@ -119,6 +256,7 @@ footer{text-align:center;padding:20px;background:rgba(4,12,24,0.75);color:#6b8a9
 
 <header>
   <h1>SecuraK</h1>
+
   <nav>
     <a href="#home">Home</a>
     <a href="#services">Services</a>
@@ -126,72 +264,285 @@ footer{text-align:center;padding:20px;background:rgba(4,12,24,0.75);color:#6b8a9
   </nav>
 </header>
 
+
 <section id="home" class="hero">
+
   <h2>Your Security. Scaled to Your Business</h2>
-  <p>We work with small, medium, and enterprise organizations to assess vulnerabilities, secure infrastructure, and build long-term cybersecurity maturity.</p>
+
+  <p>
+    We work with small, medium, and enterprise organizations to assess
+    vulnerabilities, secure infrastructure, and build long-term
+    cybersecurity maturity.
+  </p>
+
   <button onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'});">
     Request Consultation
   </button>
+
 </section>
 
+
 <section id="services" class="services">
+
   <h3>Services</h3>
+
   <div class="service-cards">
 
-    <div class="card" onclick="toggle(this)">
+    <div class="card">
+
       <h4>Vulnerability Assessment</h4>
-      <p>We evaluate internal and external infrastructure to detect configuration errors, outdated software, exposure points, and mismanaged access policies. You receive prioritized remediation steps.</p>
+
+      <p>
+        We evaluate internal and external infrastructure to detect
+        configuration errors, outdated software, exposure points,
+        and mismanaged access policies. You receive prioritized
+        remediation steps.
+      </p>
+
     </div>
 
-    <div class="card" onclick="toggle(this)">
+
+    <div class="card">
+
       <h4>Penetration Testing</h4>
-      <p>We simulate adversarial attack chains using industry-standard and advanced threat methods to expose real breach paths, privilege escalation opportunities, and lateral movement routes.</p>
+
+      <p>
+        We simulate adversarial attack chains using industry-standard
+        and advanced threat methods to expose real breach paths,
+        privilege escalation opportunities, and lateral movement routes.
+      </p>
+
     </div>
 
-    <div class="card" onclick="toggle(this)">
+
+    <div class="card">
+
       <h4>Incident Response</h4>
-      <p>We rapidly contain breaches, analyze intrusion vectors, remove malicious footholds, restore operations securely, and implement enhanced safeguards to prevent re-entry.</p>
+
+      <p>
+        We rapidly contain breaches, analyze intrusion vectors,
+        remove malicious footholds, restore operations securely,
+        and implement enhanced safeguards to prevent re-entry.
+      </p>
+
     </div>
 
   </div>
+
 </section>
+
 
 <section id="contact" class="contact">
-  <h3>Contact Us</h3>
-  <form action="https://formspree.io/f/your_form_id" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="_replyto" placeholder="Your Email" required>
-    <textarea name="message" placeholder="How can we help?" rows="5" required></textarea>
-    <button type="submit">Send</button>
+
+  <h3>Request a Consultation</h3>
+
+
+  <!--
+  ============================================================
+  FORMSPREE FORM
+
+  IMPORTANT:
+  Replace YOUR_FORM_ID with the actual Formspree form ID.
+
+  Example:
+
+  action="https://formspree.io/f/xabcdefg"
+
+  ============================================================
+  -->
+
+  <form
+    id="quote-form"
+    action="https://formspree.io/f/xwlpbzpz"
+    method="POST"
+  >
+
+    <input
+      type="text"
+      name="name"
+      placeholder="Your Name"
+      required
+    >
+
+
+    <input
+      type="email"
+      name="email"
+      placeholder="Your Email"
+      required
+    >
+
+
+    <textarea
+      name="message"
+      placeholder="How can we help?"
+      rows="5"
+      required
+    ></textarea>
+
+
+    <!-- Email subject -->
+    <input
+      type="hidden"
+      name="_subject"
+      value="New SecuraK Consultation Request"
+    >
+
+
+    <!--
+    Simple spam trap.
+    This is hidden from normal visitors.
+    -->
+    <input
+      type="text"
+      name="_gotcha"
+      tabindex="-1"
+      autocomplete="off"
+      style="display:none;"
+    >
+
+
+    <button type="submit">
+      Send Request
+    </button>
+
   </form>
+
+
+  <div id="form-status"></div>
+
 </section>
 
-<footer style="color:#dce7ef;">
-  © 2025 SecuraK Consulting  
+
+<footer>
+
+  © 2026 SecuraK Consulting
+
   <br><br>
 
-  <a href="https://www.instagram.com/securak_llc" target="_blank"
-     style="color:#dce7ef; margin-right:20px; display:inline-flex; align-items:center; gap:8px;">
-    <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png"
-         alt="Instagram" width="22" height="22">
+
+  <a
+    href="https://www.instagram.com/secura.k"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+
+    <img
+      src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png"
+      alt="Instagram"
+      width="22"
+      height="22"
+    >
+
     Instagram
+
   </a>
 
-  <a href="https://www.linkedin.com/company/securak/" target="_blank"
-     style="color:#dce7ef; display:inline-flex; align-items:center; gap:8px;">
-    <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png"
-         alt="LinkedIn" width="22" height="22">
+
+  <a
+    href="https://www.linkedin.com/company/securak/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+
+    <img
+      src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png"
+      alt="LinkedIn"
+      width="22"
+      height="22"
+    >
+
     LinkedIn
+
   </a>
+
 </footer>
+
+
+<script>
+
+/*
+============================================================
+FORMSPREE FORM SUBMISSION
+============================================================
+*/
+
+const form = document.getElementById('quote-form');
+const statusMessage = document.getElementById('form-status');
+
+
+form.addEventListener('submit', async function(event) {
+
+  event.preventDefault();
+
+
+  statusMessage.className = '';
+
+  statusMessage.style.display = 'block';
+
+  statusMessage.textContent =
+    'Sending your request...';
+
+
+  const formData = new FormData(form);
+
+
+  try {
+
+    const response = await fetch(form.action, {
+
+      method: 'POST',
+
+      body: formData,
+
+      headers: {
+        'Accept': 'application/json'
+      }
+
+    });
+
+
+    if (response.ok) {
+
+      statusMessage.className = 'success';
+
+      statusMessage.textContent =
+        'Thank you! Your consultation request has been received. We will get back to you shortly.';
+
+      form.reset();
+
+    } else {
+
+      let result = {};
+
+      try {
+        result = await response.json();
+      } catch (error) {
+        result = {};
+      }
+
+
+      statusMessage.className = 'error';
+
+      statusMessage.textContent =
+        result.errors?.[0]?.message ||
+        'Something went wrong. Please try again.';
+
+    }
+
+  } catch (error) {
+
+    statusMessage.className = 'error';
+
+    statusMessage.textContent =
+      'Unable to send your request right now. Please try again later.';
+
+  }
+
+});
+
+</script>
 
 
 </body>
 </html>
-
-
-
-
-
-
-
