@@ -1,13 +1,14 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>SecuraK | Cybersecurity Services & Incident Response Platform</title>
+<title>SecuraK Platform | From Threat Detection to Incident Resolution</title>
 
 <meta name="description"
-content="SecuraK provides cybersecurity services and is developing an incident response platform designed to move organizations from threat detection to incident resolution.">
+content="Discover SecuraK, a cybersecurity incident response platform designed to connect threat detection, investigation, risk assessment, authorized response and verification.">
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
@@ -47,8 +48,6 @@ a {
   color: inherit;
 }
 
-/* HEADER */
-
 header {
   position: sticky;
   top: 0;
@@ -85,8 +84,6 @@ nav a {
 nav a:hover {
   color: var(--cream);
 }
-
-/* GENERAL */
 
 .container {
   width: min(1120px, 90%);
@@ -134,8 +131,6 @@ p {
   margin-bottom: 32px;
 }
 
-/* BUTTONS */
-
 .buttons {
   display: flex;
   justify-content: center;
@@ -170,8 +165,6 @@ p {
   transform: translateY(-2px);
 }
 
-/* HERO */
-
 .hero {
   text-align: center;
   padding: 105px 0 85px;
@@ -193,8 +186,6 @@ p {
   color: #c9e7e9;
   font-size: 0.88rem;
 }
-
-/* CARDS */
 
 .grid {
   display: grid;
@@ -224,8 +215,6 @@ p {
   font-weight: 700;
 }
 
-/* PLATFORM */
-
 .two-column {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -241,8 +230,6 @@ ul {
 li {
   margin: 10px 0;
 }
-
-/* WORKFLOW */
 
 .steps {
   display: grid;
@@ -270,8 +257,6 @@ li {
   font-size: 0.9rem;
 }
 
-/* ROADMAP */
-
 .roadmap {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -281,8 +266,6 @@ li {
 .roadmap .card {
   border-top: 3px solid var(--teal);
 }
-
-/* CONTACT */
 
 .call-to-action {
   text-align: center;
@@ -296,8 +279,6 @@ li {
   margin: auto;
 }
 
-/* FOOTER */
-
 footer {
   text-align: center;
   padding: 28px 15px;
@@ -310,8 +291,6 @@ footer a {
   text-decoration: none;
   margin: 0 9px;
 }
-
-/* MOBILE */
 
 @media(max-width: 800px) {
   .grid,
@@ -360,11 +339,11 @@ footer a {
   <a class="brand" href="../index.html">SecuraK</a>
 
   <nav>
-    <a href="#services">Services</a>
     <a href="#platform">Platform</a>
+    <a href="#capabilities">Capabilities</a>
     <a href="#workflow">How It Works</a>
     <a href="#roadmap">Roadmap</a>
-    <a href="../index.html#contact" target="_blank" rel="noopener noreferrer">Contact</a>
+    <a href="../index.html#contact">Contact</a>
   </nav>
 </header>
 
@@ -376,7 +355,7 @@ footer a {
   <div class="container">
 
     <div class="eyebrow">
-      Cybersecurity Services • Product Innovation
+      SecuraK Incident Response Platform
     </div>
 
     <h1>
@@ -384,11 +363,10 @@ footer a {
     </h1>
 
     <p class="lead">
-      SecuraK helps organizations strengthen their security
-      through practical cybersecurity services while developing
-      an incident response platform designed to bring investigation,
-      decision-making, response and verification into one
-      connected workflow.
+      SecuraK is developing a cybersecurity platform designed
+      to bring incident detection, investigation, risk assessment,
+      authorized response and verification into one connected
+      workflow.
     </p>
 
     <div class="buttons">
@@ -396,80 +374,23 @@ footer a {
         Discover the Platform
       </a>
 
-      <a class="button secondary" href="../index.html#contact" target="_blank" rel="noopener noreferrer">
-        Talk to SecuraK
+      <a class="button secondary" href="../platform-demo/">
+        Explore the Demo
       </a>
     </div>
 
     <div class="disclaimer">
-      <strong>Startup event demonstration:</strong>
-      The current platform MVP is a local demonstration using
-      synthetic incident data. It does not connect to or take
-      action on real customer systems. Hosted, multi-customer
-      SaaS capabilities are part of the product roadmap.
+      <strong>Current demonstration:</strong>
+      The platform MVP is a local demonstration using synthetic
+      incident data. It does not connect to or take action on
+      real customer systems. Hosted, multi-customer SaaS
+      capabilities are part of the product roadmap.
     </div>
 
   </div>
 </section>
 
-<!-- SERVICES -->
-
-<section id="services">
-  <div class="container">
-
-    <h2>Cybersecurity Services</h2>
-
-    <p class="section-intro">
-      SecuraK provides cybersecurity services to help businesses
-      understand their exposure, test their defenses and respond
-      to security incidents.
-    </p>
-
-    <div class="grid">
-
-      <article class="card">
-        <span class="pill">Assess</span>
-
-        <h3>Vulnerability Assessment</h3>
-
-        <p>
-          Evaluate internal and external infrastructure for
-          configuration weaknesses, outdated software, exposure
-          points and access-control gaps, with prioritized
-          remediation guidance.
-        </p>
-      </article>
-
-      <article class="card">
-        <span class="pill">Test</span>
-
-        <h3>Penetration Testing</h3>
-
-        <p>
-          Conduct authorized security testing to identify
-          exploitable weaknesses, potential attack paths,
-          privilege escalation opportunities and
-          lateral-movement risks.
-        </p>
-      </article>
-
-      <article class="card">
-        <span class="pill">Respond</span>
-
-        <h3>Incident Response</h3>
-
-        <p>
-          Support incident investigation, containment planning,
-          recovery and security improvements to help organizations
-          respond methodically and reduce the risk of recurrence.
-        </p>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- PLATFORM -->
+<!-- PLATFORM OVERVIEW -->
 
 <section id="platform">
   <div class="container two-column">
@@ -478,14 +399,16 @@ footer a {
       <div class="eyebrow">The SecuraK Platform</div>
 
       <h2>
-        Turn Incident Signals Into a Structured Response Process.
+        A Structured Approach to Cybersecurity Incident Response.
       </h2>
 
       <p class="section-intro">
-        SecuraK is developing an incident response platform
-        intended to help security teams and service providers
-        organize incident evidence, understand risk, evaluate
-        response decisions and track verification.
+        Security incidents require more than an alert. Teams need
+        context, evidence, risk evaluation, controlled decisions
+        and a way to verify what happened.
+
+        SecuraK is being developed to organize these activities
+        into a consistent incident lifecycle.
       </p>
 
       <div class="buttons" style="justify-content:flex-start">
@@ -494,7 +417,7 @@ footer a {
           View Customer Demo
         </a>
 
-        <a class="button secondary" href="../index.html#contact" target="_blank" rel="noopener noreferrer">
+        <a class="button secondary" href="../index.html#contact">
           Discuss a Pilot
         </a>
 
@@ -503,18 +426,93 @@ footer a {
 
     <div class="card">
 
-      <h3>Platform Capabilities Being Developed</h3>
+      <h3>Designed for Security Teams</h3>
 
       <ul>
-        <li>Incident intake and suspicious-activity detection</li>
-        <li>Evidence timelines and investigation context</li>
-        <li>Risk assessment and response recommendations</li>
-        <li>Policy-guided response workflow and approval direction</li>
+        <li>Centralized incident visibility and investigation context</li>
+        <li>Evidence timelines and suspicious-activity review</li>
+        <li>Risk assessment and prioritized recommendations</li>
+        <li>Policy-guided response and human approval direction</li>
         <li>Verification status, audit history and incident reporting</li>
       </ul>
 
     </div>
 
+  </div>
+</section>
+
+<!-- CAPABILITIES -->
+
+<section id="capabilities">
+  <div class="container">
+
+    <h2>Platform Capabilities</h2>
+
+    <p class="section-intro">
+      SecuraK is being developed around the key stages of
+      incident management, helping teams move from detection
+      toward a documented and verified response.
+    </p>
+
+    <div class="grid">
+
+      <article class="card">
+        <span class="pill">01 · Detect</span>
+        <h3>Incident Detection</h3>
+        <p>
+          Organize suspicious activity and incident signals
+          into a central view for investigation and review.
+        </p>
+      </article>
+
+      <article class="card">
+        <span class="pill">02 · Investigate</span>
+        <h3>Evidence & Investigation</h3>
+        <p>
+          Bring together incident context, event timelines
+          and supporting evidence to help teams understand
+          what happened.
+        </p>
+      </article>
+
+      <article class="card">
+        <span class="pill">03 · Assess</span>
+        <h3>Risk Assessment</h3>
+        <p>
+          Evaluate incident severity, understand potential
+          impact and organize recommendations for the
+          next response decision.
+        </p>
+      </article>
+
+      <article class="card">
+        <span class="pill">04 · Authorize</span>
+        <h3>Controlled Response</h3>
+        <p>
+          Structure response decisions around policies,
+          authorization and appropriate human oversight.
+        </p>
+      </article>
+
+      <article class="card">
+        <span class="pill">05 · Respond</span>
+        <h3>Response Workflow</h3>
+        <p>
+          Track response actions and their outcomes through
+          a documented incident management process.
+        </p>
+      </article>
+
+      <article class="card">
+        <span class="pill">06 · Verify</span>
+        <h3>Verification & Audit</h3>
+        <p>
+          Record verification results, preserve an incident
+          history and support clear reporting and review.
+        </p>
+      </article>
+
+    </div>
   </div>
 </section>
 
@@ -526,8 +524,8 @@ footer a {
     <h2>One Connected Incident Lifecycle</h2>
 
     <p class="section-intro">
-      The product vision is to help teams move through a
-      consistent process rather than treating detection,
+      The SecuraK product vision is to connect the stages of
+      incident management instead of treating detection,
       investigation and response as disconnected tasks.
     </p>
 
@@ -570,9 +568,11 @@ footer a {
     <h2>Building Toward a SaaS Platform</h2>
 
     <p class="section-intro">
-      The MVP demonstrates the workflow today. The following
-      stages describe the intended product direction; they
-      are roadmap goals, not claims of features already deployed.
+      SecuraK is being developed incrementally. The current
+      demonstration establishes the workflow, while the
+      following stages describe the intended product direction.
+      These are roadmap goals, not claims of features already
+      deployed.
     </p>
 
     <div class="roadmap">
@@ -583,9 +583,9 @@ footer a {
         <h3>Demonstration MVP</h3>
 
         <p>
-          Local demonstration, synthetic incidents, investigation
-          views, risk assessment, recommended actions, simulated
-          response workflow and report output.
+          Local demonstration using synthetic incidents,
+          investigation views, risk assessment, recommended
+          actions, simulated response workflow and report output.
         </p>
       </article>
 
@@ -617,28 +617,27 @@ footer a {
   </div>
 </section>
 
-<!-- CONTACT -->
+<!-- DEMO -->
 
 <section class="call-to-action">
   <div class="container">
 
-    <h2>Explore a Collaboration With SecuraK</h2>
+    <h2>See SecuraK in Action</h2>
 
     <p>
-      For businesses seeking cybersecurity support, and partners
-      interested in the incident response platform's development,
-      get in touch to discuss needs, demonstrations and potential
-      pilot opportunities.
+      Explore the customer-facing demonstration to see how
+      SecuraK presents incident information, investigation
+      evidence, risk, recommendations and response activity.
     </p>
 
     <div class="buttons">
 
-      <a class="button primary" href="../index.html#contact">
-        Contact SecuraK
+      <a class="button primary" href="../platform-demo/">
+        Explore the Customer Demo
       </a>
 
-      <a class="button secondary" href="../platform-demo/">
-        Explore the Demo
+      <a class="button secondary" href="../index.html#contact">
+        Request a Platform Demonstration
       </a>
 
     </div>
@@ -649,7 +648,7 @@ footer a {
 </main>
 
 <footer>
-  © 2026 SecuraK Consulting
+  © 2026 SecuraK
 
   <br><br>
 
@@ -672,3 +671,4 @@ footer a {
 
 </body>
 </html>
+```
