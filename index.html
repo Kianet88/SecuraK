@@ -152,6 +152,272 @@ section {
   color: #9eb0c0;
   letter-spacing: 1px;
 }
+  /* INCIDENT COMMAND PRODUCT SHOWCASE */
+
+.product-section {
+  background: rgba(4,12,24,0.45);
+  padding: 90px 20px;
+}
+
+.product-container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.product-intro {
+  max-width: 800px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.product-badge {
+  display: inline-block;
+  color: #0096A3;
+  border: 1px solid #0096A3;
+  border-radius: 25px;
+  padding: 8px 16px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+}
+
+.product-intro h3 {
+  font-size: 2.5rem;
+  color: #FAFAD2;
+  margin-bottom: 20px;
+}
+
+.product-intro h3 span {
+  color: #0096A3;
+}
+
+.product-intro p {
+  max-width: 720px;
+  margin: auto;
+  color: #c4d0dc;
+  line-height: 1.9;
+}
+
+.dashboard-preview {
+  background: #0b192a;
+  border: 1px solid rgba(0,150,163,0.35);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 20px 55px rgba(0,0,0,0.35);
+  text-align: left;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.dashboard-header strong {
+  display: block;
+  color: #FAFAD2;
+  font-size: 17px;
+}
+
+.dashboard-header small {
+  display: block;
+  color: #9eb0c0;
+  margin-top: 5px;
+}
+
+.demo-status {
+  color: #0096A3;
+  border: 1px solid #0096A3;
+  padding: 7px 12px;
+  border-radius: 5px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.dashboard-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin: 25px 0;
+}
+
+.dashboard-metric {
+  background: #12243a;
+  border-radius: 9px;
+  padding: 18px;
+}
+
+.dashboard-metric small {
+  display: block;
+  color: #9eb0c0;
+}
+
+.dashboard-metric strong {
+  display: block;
+  font-size: 27px;
+  color: #FAFAD2;
+  margin-top: 8px;
+}
+
+.dashboard-metric .risk-value {
+  color: #ff7777;
+}
+
+.dashboard-incident {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  background: #12243a;
+  padding: 22px;
+  border-radius: 9px;
+  border-left: 3px solid #ff7777;
+}
+
+.dashboard-incident small {
+  color: #0096A3;
+  font-size: 11px;
+}
+
+.dashboard-incident h4 {
+  color: #FAFAD2;
+  margin: 8px 0;
+}
+
+.dashboard-incident p {
+  color: #b8c6d3;
+  font-size: 13px;
+}
+
+.severity {
+  background: rgba(255,70,70,0.15);
+  color: #ff7777;
+  padding: 8px 13px;
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.dashboard-progress {
+  margin-top: 25px;
+}
+
+.progress-heading {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.progress-heading strong {
+  color: #FAFAD2;
+}
+
+.progress-heading small {
+  color: #9eb0c0;
+}
+
+.workflow-steps {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.workflow-steps span {
+  flex: 1;
+  min-width: 85px;
+  text-align: center;
+  padding: 12px 5px;
+  border-radius: 6px;
+  background: #182a40;
+  color: #aebdca;
+  font-size: 12px;
+}
+
+.workflow-steps .completed {
+  background: rgba(0,150,163,0.2);
+  color: #5dd9df;
+}
+
+.product-features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 35px;
+}
+
+.product-feature {
+  background: rgba(14,25,40,0.8);
+  border: 1px solid rgba(0,150,163,0.2);
+  border-radius: 10px;
+  padding: 22px;
+  text-align: left;
+}
+
+.product-feature h4 {
+  color: #FAFAD2;
+  margin-bottom: 10px;
+}
+
+.product-feature p {
+  color: #b8c6d3;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.product-action {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.product-action p {
+  color: #b8c6d3;
+  margin-bottom: 20px;
+}
+
+.product-button {
+  display: inline-block;
+  padding: 15px 28px;
+  background: #FAFAD2;
+  color: #00171f;
+  text-decoration: none;
+  border-radius: 7px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.product-button:hover {
+  background: #0096A3;
+  color: white;
+}
+
+@media(max-width:768px) {
+
+  .product-intro h3 {
+    font-size: 2rem;
+  }
+
+  .dashboard-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .product-features {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-preview {
+    padding: 18px;
+  }
+
+}
 /* SERVICES */
 .services h3,
 .contact h3 {
@@ -412,7 +678,134 @@ color: #0096A3;
   </div>
 
 </section>
+<!-- SECURAK INCIDENT COMMAND SHOWCASE -->
 
+<section id="incident-command" class="product-section">
+
+  <div class="product-container">
+
+    <div class="product-intro">
+
+      <div class="product-badge">
+        SECURAK SECURITY TECHNOLOGY
+      </div>
+
+      <h3>
+        Introducing <span>Incident Command</span>
+      </h3>
+
+      <p>
+        A developing incident response platform designed to help
+        security teams organize investigations, understand risk,
+        manage response activities and maintain clear incident records.
+      </p>
+
+    </div>
+
+    <!-- DASHBOARD PREVIEW -->
+
+    <div class="dashboard-preview">
+
+      <div class="dashboard-header">
+        <div>
+          <strong>SecuraK Incident Command</strong>
+          <small>Security Operations Overview</small>
+        </div>
+
+        <span class="demo-status">SYNTHETIC DEMO</span>
+      </div>
+
+      <div class="dashboard-metrics">
+
+        <div class="dashboard-metric">
+          <small>Active Incidents</small>
+          <strong>03</strong>
+        </div>
+
+        <div class="dashboard-metric">
+          <small>High Risk</small>
+          <strong class="risk-value">01</strong>
+        </div>
+
+        <div class="dashboard-metric">
+          <small>Under Investigation</small>
+          <strong>02</strong>
+        </div>
+
+      </div>
+
+      <div class="dashboard-incident">
+
+        <div>
+          <small>INCIDENT SEC-2026-001</small>
+          <h4>Suspicious Authentication Activity</h4>
+          <p>Multiple failed login attempts followed by a successful login.</p>
+        </div>
+
+        <span class="severity">HIGH</span>
+
+      </div>
+
+      <div class="dashboard-progress">
+
+        <div class="progress-heading">
+          <strong>Incident Response Workflow</strong>
+          <small>Illustrative workflow</small>
+        </div>
+
+        <div class="workflow-steps">
+          <span class="completed">Detect</span>
+          <span class="completed">Investigate</span>
+          <span>Assess</span>
+          <span>Respond</span>
+          <span>Verify</span>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- PLATFORM CAPABILITIES -->
+
+    <div class="product-features">
+
+      <div class="product-feature">
+        <h4>Incident Detection</h4>
+        <p>Organize security events and identify potentially suspicious activity.</p>
+      </div>
+
+      <div class="product-feature">
+        <h4>Investigation</h4>
+        <p>Review incident timelines, supporting evidence and investigation findings.</p>
+      </div>
+
+      <div class="product-feature">
+        <h4>Risk Assessment</h4>
+        <p>Understand incident severity and review recommended response actions.</p>
+      </div>
+
+      <div class="product-feature">
+        <h4>Response Management</h4>
+        <p>Track response workflows, verification activity and audit records.</p>
+      </div>
+
+    </div>
+
+    <div class="product-action">
+
+      <p>
+        Explore the interactive demonstration using synthetic security data.
+      </p>
+
+      <a href="platform-investor-demo/" class="product-button">
+        Explore Incident Command →
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
 
 <section id="services" class="services">
 
