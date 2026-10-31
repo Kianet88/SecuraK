@@ -3,673 +3,118 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>SecuraK Platform | From Threat Detection to Incident Resolution</title>
-
-<meta name="description"
-content="Discover SecuraK, a cybersecurity incident response platform designed to connect threat detection, investigation, risk assessment, authorized response and verification.">
-
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
+<meta name="description" content="Discover SecuraK's developing incident response platform and cybersecurity services, designed to bring investigation, risk assessment and response workflows into clearer focus.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root {
-  --navy: #061426;
-  --cream: #FAFAD2;
-  --teal: #0096a3;
-  --text: #dce7ef;
-  --muted: #afc0ce;
-  --panel: rgba(14,25,40,0.88);
-  --border: rgba(0,224,214,0.2);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  line-height: 1.7;
-  color: var(--text);
-  background:
-    linear-gradient(rgba(4,12,24,0.91), rgba(4,12,24,0.96)),
-    url('../logo.png') no-repeat center center fixed;
-  background-size: cover;
-  background-color: var(--navy);
-}
-
-a {
-  color: inherit;
-}
-
-header {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  padding: 18px 5%;
-  background: rgba(4,12,24,0.95);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border);
-}
-
-.brand {
-  color: var(--cream);
-  font-size: 1.6rem;
-  font-weight: 800;
-  text-decoration: none;
-}
-
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 22px;
-}
-
-nav a {
-  color: var(--text);
-  text-decoration: none;
-  font-size: 0.9rem;
-}
-
-nav a:hover {
-  color: var(--cream);
-}
-
-.container {
-  width: min(1120px, 90%);
-  margin: auto;
-}
-
-section {
-  padding: 75px 0;
-}
-
-.eyebrow {
-  color: #73dce0;
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  font-size: 0.78rem;
-  font-weight: 700;
-}
-
-h1 {
-  max-width: 900px;
-  margin: 18px auto;
-  color: var(--cream);
-  font-size: clamp(2.3rem, 5vw, 4rem);
-  line-height: 1.15;
-}
-
-h2 {
-  color: var(--cream);
-  font-size: clamp(1.8rem, 3vw, 2.5rem);
-  margin-bottom: 16px;
-  line-height: 1.3;
-}
-
-h3 {
-  color: var(--cream);
-  margin-bottom: 12px;
-}
-
-p {
-  color: var(--muted);
-}
-
-.section-intro {
-  max-width: 760px;
-  margin-bottom: 32px;
-}
-
-.buttons {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 14px;
-  margin-top: 28px;
-}
-
-.button {
-  display: inline-block;
-  padding: 13px 23px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 700;
-  border: 1px solid var(--cream);
-  transition: 0.25s;
-}
-
-.button.primary {
-  background: var(--cream);
-  color: #00171f;
-}
-
-.button.secondary {
-  color: var(--cream);
-}
-
-.button:hover {
-  background: var(--teal);
-  border-color: var(--teal);
-  color: white;
-  transform: translateY(-2px);
-}
-
-.hero {
-  text-align: center;
-  padding: 105px 0 85px;
-}
-
-.lead {
-  max-width: 790px;
-  margin: 0 auto;
-  font-size: 1.08rem;
-}
-
-.disclaimer {
-  max-width: 850px;
-  margin: 32px auto 0;
-  padding: 15px;
-  border: 1px solid var(--border);
-  border-radius: 9px;
-  background: rgba(0,150,163,0.09);
-  color: #c9e7e9;
-  font-size: 0.88rem;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.card {
-  background: var(--panel);
-  border: 1px solid var(--border);
-  border-radius: 13px;
-  padding: 26px;
-}
-
-.card p {
-  font-size: 0.94rem;
-}
-
-.pill {
-  display: inline-block;
-  margin-bottom: 14px;
-  padding: 4px 10px;
-  border-radius: 30px;
-  background: rgba(0,150,163,0.16);
-  color: #8be1e4;
-  font-size: 0.75rem;
-  font-weight: 700;
-}
-
-.two-column {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 35px;
-  align-items: center;
-}
-
-ul {
-  padding-left: 20px;
-  color: var(--muted);
-}
-
-li {
-  margin: 10px 0;
-}
-
-.steps {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 12px;
-  margin-top: 28px;
-}
-
-.step {
-  padding: 18px 12px;
-  border-radius: 10px;
-  background: var(--panel);
-  border: 1px solid var(--border);
-}
-
-.step strong {
-  display: block;
-  color: var(--teal);
-  margin-bottom: 8px;
-}
-
-.step span {
-  color: var(--cream);
-  font-weight: 700;
-  font-size: 0.9rem;
-}
-
-.roadmap {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-}
-
-.roadmap .card {
-  border-top: 3px solid var(--teal);
-}
-
-.call-to-action {
-  text-align: center;
-  background: rgba(0,150,163,0.08);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-}
-
-.call-to-action p {
-  max-width: 700px;
-  margin: auto;
-}
-
-footer {
-  text-align: center;
-  padding: 28px 15px;
-  color: var(--muted);
-  font-size: 0.85rem;
-}
-
-footer a {
-  color: var(--cream);
-  text-decoration: none;
-  margin: 0 9px;
-}
-
-@media(max-width: 800px) {
-  .grid,
-  .roadmap {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .steps {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .two-column {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media(max-width: 560px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  nav {
-    gap: 13px;
-  }
-
-  .grid,
-  .roadmap {
-    grid-template-columns: 1fr;
-  }
-
-  .hero {
-    padding: 70px 0;
-  }
-
-  section {
-    padding: 55px 0;
-  }
-}
+:root{--navy:#061426;--navy2:#0a1d32;--cream:#FAFAD2;--teal:#0096A3;--tealLight:#75d5d8;--text:#e5edf2;--muted:#aebfcb;--line:rgba(190,220,229,.17);--content:1160px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+body{color:var(--text);background:var(--navy);font-family:"DM Sans",sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:inherit}.container{width:min(var(--content),88%);margin-inline:auto}
+header{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:17px 6%;background:rgba(6,20,38,.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.brand{color:var(--cream);font:800 1.55rem "Manrope",sans-serif;letter-spacing:-.06em;text-decoration:none;white-space:nowrap}.brand span{color:var(--teal)}
+nav{display:flex;align-items:center;gap:clamp(13px,2.3vw,30px)}nav a{color:#c7d4dd;text-decoration:none;font-size:.85rem;font-weight:600;transition:color .2s}nav a:hover,nav a:focus-visible{color:var(--cream)}.nav-cta{border:1px solid rgba(250,250,210,.55);padding:9px 15px}
+.eyebrow{color:var(--tealLight);font-size:.72rem;font-weight:700;letter-spacing:.19em;text-transform:uppercase}
+h1,h2,h3{font-family:"Manrope",sans-serif;letter-spacing:-.045em}h1{max-width:760px;color:var(--cream);font-size:clamp(2.8rem,6.1vw,5.35rem);line-height:1.04;font-weight:700;margin:22px 0}h2{color:var(--cream);font-size:clamp(2rem,4vw,3.35rem);line-height:1.12;font-weight:700}h3{color:var(--cream);font-size:1.15rem;line-height:1.35}p{color:var(--muted)}
+.hero{padding:100px 0 88px;position:relative;overflow:hidden}.hero:before{content:"";position:absolute;width:540px;height:540px;right:-190px;top:-220px;background:radial-gradient(circle,rgba(0,150,163,.17),transparent 68%);pointer-events:none}
+.hero-layout{display:grid;grid-template-columns:1.05fr .95fr;gap:7%;align-items:center;position:relative}.hero-copy .lead{max-width:620px;font-size:1.08rem;line-height:1.85}.accent{color:var(--tealLight)}
+.actions{display:flex;flex-wrap:wrap;gap:13px;margin-top:30px}.button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 20px;text-decoration:none;font-weight:700;font-size:.88rem;border:1px solid transparent;transition:background .2s,border-color .2s,color .2s}.button.primary{background:var(--cream);color:#071827}.button.secondary{border-color:rgba(250,250,210,.5);color:var(--cream)}.button:hover{background:var(--teal);border-color:var(--teal);color:white}
+.visual-shell{min-height:390px;position:relative;padding:27px;border:1px solid rgba(117,213,216,.28);background:linear-gradient(145deg,rgba(15,43,62,.9),rgba(7,22,39,.72));box-shadow:0 30px 80px rgba(0,0,0,.22)}
+.visual-top{display:flex;justify-content:space-between;align-items:center;padding-bottom:18px;border-bottom:1px solid var(--line)}.visual-label{font:700 .76rem "Manrope",sans-serif;letter-spacing:.08em;color:#d9e8eb}.status{font-size:.68rem;color:#a9e2d4;letter-spacing:.08em;text-transform:uppercase}
+.visual-title{font:700 1.35rem "Manrope",sans-serif;color:var(--cream);margin:25px 0 7px}.visual-sub{font-size:.78rem}.signal-list{margin-top:25px}.signal{display:grid;grid-template-columns:12px 1fr auto;gap:13px;align-items:center;padding:15px 0;border-bottom:1px solid var(--line)}.signal-dot{width:8px;height:8px;border-radius:50%;background:var(--tealLight)}.signal strong{display:block;color:#e9f1f4;font-size:.8rem}.signal small{display:block;color:#93a9b7;font-size:.7rem;margin-top:2px}.signal em{font-style:normal;font-size:.67rem;color:#f1dba0}.visual-foot{margin-top:20px;color:#8fa6b5;font-size:.68rem}
+.disclaimer{margin-top:27px;padding:13px 16px;border-left:2px solid var(--teal);background:rgba(0,150,163,.08);font-size:.78rem;color:#bcd0d9;max-width:760px}.disclaimer strong{color:#e3f2f1}
+.section{padding:100px 0}.section.alt{background:var(--navy2)}.split{display:grid;grid-template-columns:.9fr 1.1fr;gap:10%;align-items:start}.split-copy{max-width:640px}.split-copy h2{margin:17px 0 22px}.split-copy p{font-size:1rem;line-height:1.9}.statement{border-left:1px solid var(--teal);padding:8px 0 8px 28px;color:#d9e5eb;font:500 clamp(1.25rem,2.3vw,1.8rem)/1.55 "Manrope",sans-serif;max-width:600px}.statement span{color:var(--tealLight)}
+.section-heading{max-width:740px;margin-bottom:55px}.section-heading h2{margin:15px 0 18px}.section-heading p{max-width:650px}
+.capability-list{border-top:1px solid var(--line)}.capability{display:grid;grid-template-columns:90px minmax(210px,.8fr) 1.2fr;gap:25px;align-items:start;padding:27px 0;border-bottom:1px solid var(--line)}.cap-number{color:var(--tealLight);font:700 .85rem "Manrope",sans-serif;padding-top:3px}.capability h3{font-size:1.25rem}.capability p{max-width:590px;font-size:.93rem}
+.workflow{display:grid;grid-template-columns:repeat(6,1fr);margin-top:50px;border-top:1px solid rgba(117,213,216,.5)}.workflow-step{padding:22px 14px 0 0;position:relative}.workflow-step:before{content:"";position:absolute;top:-5px;left:0;width:9px;height:9px;background:var(--tealLight);border-radius:50%}.workflow-step b{display:block;color:var(--tealLight);font-size:.72rem;letter-spacing:.1em;margin-bottom:12px}.workflow-step span{display:block;color:var(--cream);font:700 .96rem "Manrope",sans-serif}.workflow-note{margin-top:27px;font-size:.82rem;max-width:720px}
+.roadmap-intro{display:grid;grid-template-columns:1fr 1fr;gap:8%;align-items:end;margin-bottom:48px}.roadmap-intro p{max-width:520px}.roadmap{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.roadmap-stage{padding:28px 28px 32px 0}.roadmap-stage+.roadmap-stage{border-left:1px solid var(--line);padding-left:28px}.stage-label{display:block;color:var(--tealLight);font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:22px}.roadmap-stage h3{font-size:1.3rem;margin-bottom:13px}.roadmap-stage p{font-size:.88rem}
+.cta{padding:88px 0;background:#0b2639;position:relative;overflow:hidden}.cta:after{content:"";position:absolute;width:390px;height:390px;right:-110px;top:-180px;border:1px solid rgba(117,213,216,.18);border-radius:50%;box-shadow:0 0 0 45px rgba(117,213,216,.025),0 0 0 90px rgba(117,213,216,.02)}.cta-inner{position:relative;z-index:1;display:flex;justify-content:space-between;align-items:center;gap:40px}.cta-copy{max-width:680px}.cta-copy h2{margin:14px 0}.cta-copy p{max-width:620px}.cta .actions{margin-top:0}
+footer{padding:30px 6%;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}footer p{font-size:.78rem}.footer-links{display:flex;gap:22px;flex-wrap:wrap}.footer-links a{font-size:.8rem;color:#c5d2db;text-decoration:none}.footer-links a:hover{color:var(--cream)}
+@media(max-width:900px){.hero-layout{grid-template-columns:1fr;gap:45px}.visual-shell{max-width:650px}.split{grid-template-columns:1fr;gap:35px}.workflow{grid-template-columns:repeat(3,1fr);row-gap:30px}.roadmap-intro{grid-template-columns:1fr;gap:20px}.cta-inner{align-items:flex-start;flex-direction:column}}
+@media(max-width:650px){header{align-items:flex-start;flex-direction:column;padding:15px 6%}nav{width:100%;gap:12px 18px;flex-wrap:wrap}nav a{font-size:.78rem}.hero{padding:70px 0 65px}.section{padding:70px 0}.visual-shell{padding:19px;min-height:0}.capability{grid-template-columns:42px 1fr;gap:12px;padding:23px 0}.capability p{grid-column:2}.workflow{grid-template-columns:repeat(2,1fr);row-gap:28px}.roadmap{grid-template-columns:1fr}.roadmap-stage,.roadmap-stage+.roadmap-stage{padding:25px 0;border-left:0}.roadmap-stage+.roadmap-stage{border-top:1px solid var(--line)}.cta{padding:70px 0}footer{align-items:flex-start;flex-direction:column}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
 </style>
 </head>
-
 <body>
-
 <header>
-  <a class="brand" href="../index.html">SecuraK</a>
-
-  <nav>
-    <a href="#platform">Platform</a>
-    <a href="#capabilities">Capabilities</a>
-    <a href="#workflow">How It Works</a>
-    <a href="#roadmap">Roadmap</a>
-    <a href="../index.html#contact">Contact</a>
+  <a class="brand" href="../index.html" aria-label="SecuraK home">Secura<span>K</span></a>
+  <nav aria-label="Main navigation">
+    <a href="#platform">Platform</a><a href="#capabilities">Capabilities</a><a href="#workflow">Workflow</a><a href="#roadmap">Roadmap</a><a class="nav-cta" href="../index.html#contact">Contact</a>
   </nav>
 </header>
-
 <main>
-
-<!-- HERO -->
-
-<section class="hero">
-  <div class="container">
-
-    <div class="eyebrow">
-      SecuraK Incident Response Platform
-    </div>
-
-    <h1>
-      From Threat Detection to Incident Resolution.
-    </h1>
-
-    <p class="lead">
-      SecuraK is developing a cybersecurity platform designed
-      to bring incident detection, investigation, risk assessment,
-      authorized response and verification into one connected
-      workflow.
-    </p>
-
-    <div class="buttons">
-      <a class="button primary" href="#platform">
-        Discover the Platform
-      </a>
-
-      <a class="button secondary" href="../platform-demo/">
-        Explore the Demo
-      </a>
-    </div>
-
-    <div class="disclaimer">
-      <strong>Current demonstration:</strong>
-      The platform MVP is a local demonstration using synthetic
-      incident data. It does not connect to or take action on
-      real customer systems. Hosted, multi-customer SaaS
-      capabilities are part of the product roadmap.
-    </div>
-
-  </div>
-</section>
-
-<!-- PLATFORM OVERVIEW -->
-
-<section id="platform">
-  <div class="container two-column">
-
-    <div>
-      <div class="eyebrow">The SecuraK Platform</div>
-
-      <h2>
-        A Structured Approach to Cybersecurity Incident Response.
-      </h2>
-
-      <p class="section-intro">
-        Security incidents require more than an alert. Teams need
-        context, evidence, risk evaluation, controlled decisions
-        and a way to verify what happened.
-
-        SecuraK is being developed to organize these activities
-        into a consistent incident lifecycle.
-      </p>
-
-      <div class="buttons" style="justify-content:flex-start">
-
-        <a class="button primary" href="../platform-demo/">
-          View Customer Demo
-        </a>
-
-        <a class="button secondary" href="../index.html#contact">
-          Discuss a Pilot
-        </a>
-
+  <section class="hero">
+    <div class="container hero-layout">
+      <div class="hero-copy">
+        <div class="eyebrow">SecuraK Incident Response Platform</div>
+        <h1>From threat detection <span class="accent">to incident resolution.</span></h1>
+        <p class="lead">SecuraK is developing a cybersecurity platform designed to bring incident detection, investigation, risk assessment, response planning and verification into a more connected workflow.</p>
+        <div class="actions"><a class="button primary" href="#platform">Discover the platform</a><a class="button secondary" href="../platform-demo/">Explore the demo</a></div>
+        <div class="disclaimer"><strong>Current demonstration:</strong> The MVP is a local demonstration using synthetic incident data. It does not connect to or take action on real customer systems. Hosted, multi-customer SaaS capabilities remain part of the product roadmap.</div>
+      </div>
+      <!-- Conceptual visual only; replace with an authentic product screenshot when available. -->
+      <div class="visual-shell" aria-label="Illustrative incident overview, not live platform data">
+        <div class="visual-top"><span class="visual-label">INCIDENT COMMAND / OVERVIEW</span><span class="status">● Demonstration concept</span></div>
+        <div class="visual-title">Investigation activity</div><p class="visual-sub">A conceptual view of the incident workflow</p>
+        <div class="signal-list">
+          <div class="signal"><span class="signal-dot"></span><div><strong>Authentication anomaly</strong><small>Repeated failed sign-ins · Synthetic event</small></div><em>REVIEW</em></div>
+          <div class="signal"><span class="signal-dot"></span><div><strong>Incident context assembled</strong><small>Related activity grouped for investigation</small></div><em>OPEN</em></div>
+          <div class="signal"><span class="signal-dot"></span><div><strong>Response recommendation</strong><small>Suggested next step available for review</small></div><em>PROPOSED</em></div>
+        </div>
+        <div class="visual-foot">Illustrative interface composition · Not connected to live systems</div>
       </div>
     </div>
-
-    <div class="card">
-
-      <h3>Designed for Security Teams</h3>
-
-      <ul>
-        <li>Centralized incident visibility and investigation context</li>
-        <li>Evidence timelines and suspicious-activity review</li>
-        <li>Risk assessment and prioritized recommendations</li>
-        <li>Policy-guided response and human approval direction</li>
-        <li>Verification status, audit history and incident reporting</li>
-      </ul>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- CAPABILITIES -->
-
-<section id="capabilities">
-  <div class="container">
-
-    <h2>Platform Capabilities</h2>
-
-    <p class="section-intro">
-      SecuraK is being developed around the key stages of
-      incident management, helping teams move from detection
-      toward a documented and verified response.
-    </p>
-
-    <div class="grid">
-
-      <article class="card">
-        <span class="pill">01 · Detect</span>
-        <h3>Incident Detection</h3>
-        <p>
-          Organize suspicious activity and incident signals
-          into a central view for investigation and review.
-        </p>
-      </article>
-
-      <article class="card">
-        <span class="pill">02 · Investigate</span>
-        <h3>Evidence & Investigation</h3>
-        <p>
-          Bring together incident context, event timelines
-          and supporting evidence to help teams understand
-          what happened.
-        </p>
-      </article>
-
-      <article class="card">
-        <span class="pill">03 · Assess</span>
-        <h3>Risk Assessment</h3>
-        <p>
-          Evaluate incident severity, understand potential
-          impact and organize recommendations for the
-          next response decision.
-        </p>
-      </article>
-
-      <article class="card">
-        <span class="pill">04 · Authorize</span>
-        <h3>Controlled Response</h3>
-        <p>
-          Structure response decisions around policies,
-          authorization and appropriate human oversight.
-        </p>
-      </article>
-
-      <article class="card">
-        <span class="pill">05 · Respond</span>
-        <h3>Response Workflow</h3>
-        <p>
-          Track response actions and their outcomes through
-          a documented incident management process.
-        </p>
-      </article>
-
-      <article class="card">
-        <span class="pill">06 · Verify</span>
-        <h3>Verification & Audit</h3>
-        <p>
-          Record verification results, preserve an incident
-          history and support clear reporting and review.
-        </p>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- WORKFLOW -->
-
-<section id="workflow">
-  <div class="container">
-
-    <h2>One Connected Incident Lifecycle</h2>
-
-    <p class="section-intro">
-      The SecuraK product vision is to connect the stages of
-      incident management instead of treating detection,
-      investigation and response as disconnected tasks.
-    </p>
-
-    <div class="steps">
-
-      <div class="step">
-        <strong>01</strong>
-        <span>Detect</span>
+  </section>
+  <section class="section alt" id="platform">
+    <div class="container split">
+      <div class="split-copy"><div class="eyebrow">The SecuraK platform</div><h2>Security incidents need more than an alert.</h2><p>Teams need context, evidence, risk evaluation, informed decisions and a way to review what happened. SecuraK is being developed to organize these activities into a clearer, more consistent incident lifecycle.</p>
+        <div class="actions"><a class="button primary" href="../platform-demo/">View customer demo</a><a class="button secondary" href="../index.html#contact">Discuss a pilot</a></div>
       </div>
-
-      <div class="step">
-        <strong>02</strong>
-        <span>Investigate</span>
-      </div>
-
-      <div class="step">
-        <strong>03</strong>
-        <span>Assess & Decide</span>
-      </div>
-
-      <div class="step">
-        <strong>04</strong>
-        <span>Respond</span>
-      </div>
-
-      <div class="step">
-        <strong>05</strong>
-        <span>Verify & Learn</span>
-      </div>
-
+      <div class="statement">Bring the investigation into focus. Connect the evidence, understand the risk, and make the next step <span>clearer.</span></div>
     </div>
-  </div>
-</section>
-
-<!-- ROADMAP -->
-
-<section id="roadmap">
-  <div class="container">
-
-    <h2>Building Toward a SaaS Platform</h2>
-
-    <p class="section-intro">
-      SecuraK is being developed incrementally. The current
-      demonstration establishes the workflow, while the
-      following stages describe the intended product direction.
-      These are roadmap goals, not claims of features already
-      deployed.
-    </p>
-
-    <div class="roadmap">
-
-      <article class="card">
-        <span class="pill">Current Stage</span>
-
-        <h3>Demonstration MVP</h3>
-
-        <p>
-          Local demonstration using synthetic incidents,
-          investigation views, risk assessment, recommended
-          actions, simulated response workflow and report output.
-        </p>
-      </article>
-
-      <article class="card">
-        <span class="pill">Next Stage</span>
-
-        <h3>Controlled Pilot SaaS</h3>
-
-        <p>
-          Hosted environment, customer accounts and organization
-          separation, persistent incident records, real log
-          ingestion and human-approved response controls.
-        </p>
-      </article>
-
-      <article class="card">
-        <span class="pill">Long-Term Vision</span>
-
-        <h3>Full Incident Response Platform</h3>
-
-        <p>
-          Continuous detection, integrations, advanced analysis,
-          governed containment and remediation, response
-          verification and subscription-based service.
-        </p>
-      </article>
-
+  </section>
+  <section class="section" id="capabilities">
+    <div class="container">
+      <div class="section-heading"><div class="eyebrow">Platform capabilities</div><h2>One workflow. A clearer view of the incident.</h2><p>SecuraK is being developed around the key stages of incident management, helping teams move from suspicious activity toward a documented and reviewed response.</p></div>
+      <div class="capability-list">
+        <article class="capability"><span class="cap-number">01 / DETECT</span><h3>Incident detection</h3><p>Organize suspicious activity and incident signals into a central view for investigation and review.</p></article>
+        <article class="capability"><span class="cap-number">02 / INVESTIGATE</span><h3>Evidence &amp; investigation</h3><p>Bring together event context, timelines and supporting evidence to help teams understand what happened.</p></article>
+        <article class="capability"><span class="cap-number">03 / ASSESS</span><h3>Risk assessment</h3><p>Evaluate incident severity, understand potential impact and organize recommendations for the next decision.</p></article>
+        <article class="capability"><span class="cap-number">04 / AUTHORIZE</span><h3>Controlled response</h3><p>Structure response decisions around policies, authorization and appropriate human oversight.</p></article>
+        <article class="capability"><span class="cap-number">05 / RESPOND</span><h3>Response workflow</h3><p>Track planned or simulated response activity and its outcomes through a documented incident process.</p></article>
+        <article class="capability"><span class="cap-number">06 / VERIFY</span><h3>Verification &amp; audit</h3><p>Record verification results, preserve incident history and support clear reporting and review.</p></article>
+      </div>
     </div>
-  </div>
-</section>
-
-<!-- DEMO -->
-
-<section class="call-to-action">
-  <div class="container">
-
-    <h2>See SecuraK in Action</h2>
-
-    <p>
-      Explore the customer-facing demonstration to see how
-      SecuraK presents incident information, investigation
-      evidence, risk, recommendations and response activity.
-    </p>
-
-    <div class="buttons">
-
-      <a class="button primary" href="../platform-demo/">
-        Explore the Customer Demo
-      </a>
-      <a class="button primary" href="../platform-investor-demo/">
-        Explore SecuraK Incident Command
-      </a>
-
-      <a class="button primary" href="../index.html#contact">
-        Request a Platform Demonstration
-      </a>
-
+  </section>
+  <section class="section alt" id="workflow">
+    <div class="container">
+      <div class="section-heading"><div class="eyebrow">How it works</div><h2>One connected incident lifecycle.</h2><p>The product vision connects detection, investigation and response as related stages—not disconnected tasks.</p></div>
+      <div class="workflow" aria-label="Incident workflow: Detect, Investigate, Assess, Authorize, Respond, Verify">
+        <div class="workflow-step"><b>01</b><span>Detect</span></div><div class="workflow-step"><b>02</b><span>Investigate</span></div><div class="workflow-step"><b>03</b><span>Assess</span></div><div class="workflow-step"><b>04</b><span>Authorize</span></div><div class="workflow-step"><b>05</b><span>Respond</span></div><div class="workflow-step"><b>06</b><span>Verify</span></div>
+      </div>
+      <p class="workflow-note">The current local demonstration illustrates selected workflow concepts using synthetic data. Live integrations and automated actions are not currently provided.</p>
     </div>
-
-  </div>
-</section>
-
+  </section>
+  <section class="section" id="roadmap">
+    <div class="container">
+      <div class="roadmap-intro"><div><div class="eyebrow">Product direction</div><h2>Building toward a hosted platform.</h2></div><p>SecuraK is being developed incrementally. The current demonstration establishes workflow concepts; the following stages describe intended future development, not features currently deployed.</p></div>
+      <div class="roadmap">
+        <article class="roadmap-stage"><span class="stage-label">Current stage</span><h3>Demonstration MVP</h3><p>Local demonstration using synthetic incidents, investigation views, risk assessment, recommended actions, simulated response workflow and report output.</p></article>
+        <article class="roadmap-stage"><span class="stage-label">Next stage</span><h3>Controlled pilot SaaS</h3><p>Planned hosted environment, customer accounts and organization separation, persistent incident records, real log ingestion and human-approved response controls.</p></article>
+        <article class="roadmap-stage"><span class="stage-label">Long-term vision</span><h3>Incident response platform</h3><p>Longer-term goals include integrations, expanded analysis, governed containment and remediation, response verification and subscription-based service.</p></article>
+      </div>
+    </div>
+  </section>
+  <section class="cta">
+    <div class="container cta-inner">
+      <div class="cta-copy"><div class="eyebrow">Explore SecuraK</div><h2>Bring greater clarity to incident response.</h2><p>Explore the demonstration to see how SecuraK presents incident information, investigation context, risk, recommendations and response activity.</p></div>
+      <div class="actions"><a class="button primary" href="../platform-demo/">Customer demo</a><a class="button secondary" href="../platform-investor-demo/">Incident Command demo</a><a class="button secondary" href="../index.html#contact">Contact SecuraK</a></div>
+    </div>
+  </section>
 </main>
-
-<footer>
-  © 2026 SecuraK
-
-  <br><br>
-
-  <a href="https://www.instagram.com/secura.k"
-     target="_blank"
-     rel="noopener noreferrer">
-    Instagram
-  </a>
-
-  <a href="https://www.linkedin.com/company/securak/"
-     target="_blank"
-     rel="noopener noreferrer">
-    LinkedIn
-  </a>
-
-  <a href="../index.html">
-    Main Website
-  </a>
-</footer>
-
+<footer><p>© 2026 SecuraK</p><div class="footer-links"><a href="https://www.instagram.com/secura.k" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://www.linkedin.com/company/securak/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="../index.html">Main website</a></div></footer>
 </body>
 </html>
