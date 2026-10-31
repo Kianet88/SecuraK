@@ -433,60 +433,38 @@ section {
   gap: 32px;
 }
 
+/* PROFESSIONAL SERVICE CARDS */
+
 .card {
-  background: rgba(14,25,40,0.75);
+  background: rgba(14,25,40,0.45);
   backdrop-filter: blur(8px);
-  padding: 28px;
+  padding: 30px;
   width: 290px;
-  border-radius: 12px;
-  cursor: pointer;
-  transition:
-    transform .35s ease,
-    box-shadow .45s ease,
-    background .35s ease,
-    border-color .45s ease;
-  border: 1px solid rgba(0,224,214,0.15);
+  border-radius: 10px;
+  border: 1px solid rgba(0,150,163,0.18);
   text-align: left;
-  overflow: hidden;
-  max-height: 120px;
+  transition: border-color 0.3s ease,
+              background 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-8px) scale(1.03);
-  background: rgba(14,25,40,0.90);
-  box-shadow:
-    0 0 12px rgba(0,224,214,0.20),
-    0 0 28px rgba(0,224,214,0.25);
-  border-color: rgba(0,224,214,0.45);
-  max-height: 500px;
+  background: rgba(14,25,40,0.75);
+  border-color: #0096A3;
 }
 
 .card h4 {
   color: #FAFAD2;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
+  font-size: 17px;
 }
 
 .card p {
-  opacity: 0;
+  opacity: 1;
   margin-top: 8px;
   color: #dce7ef;
-  line-height: 1.5;
-  transition: opacity .35s ease-in-out;
+  line-height: 1.8;
+  font-size: 13px;
 }
-
-.card:hover p {
-  opacity: 1;
-}
-
-/* CONTACT FORM */
-.contact form {
-  max-width: 500px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
 .contact input,
 .contact textarea {
   padding: 15px;
