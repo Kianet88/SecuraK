@@ -85,7 +85,73 @@ section {
   background: #0096a3;
   color: white;
 }
+/* PREMIUM HOMEPAGE HERO */
 
+.hero {
+  min-height: 580px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 20px;
+}
+
+.hero-content {
+  max-width: 950px;
+  margin: auto;
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 9px 18px;
+  border: 1px solid rgba(0,150,163,0.6);
+  border-radius: 30px;
+  color: #0096A3;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 28px;
+}
+
+.hero h2 {
+  font-size: 3.3rem;
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+
+.hero-highlight {
+  color: #0096A3;
+}
+
+.hero p {
+  max-width: 720px;
+  font-size: 1.05rem;
+  line-height: 1.9;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.hero .secondary-button {
+  background: transparent;
+  border: 1px solid #0096A3;
+  color: #FAFAD2;
+}
+
+.hero .secondary-button:hover {
+  background: #0096A3;
+  color: white;
+}
+
+.hero-caption {
+  margin-top: 35px;
+  font-size: 12px;
+  color: #9eb0c0;
+  letter-spacing: 1px;
+}
 /* SERVICES */
 .services h3,
 .contact h3 {
@@ -266,35 +332,84 @@ footer a:last-child {
     max-height: none;
   }
 }
+  /* SecuraK brand identity */
+.brand {
+font-size: 28px;
+font-weight: 800;
+letter-spacing: -1px;
+color: #FAFAD2;
+margin: 0;
+}
+
+.brand-k {
+color: #0096A3;
+}
+
+/* Consistent navigation */
+nav a {
+text-decoration: none;
+transition: color 0.25s ease;
+}
+
+nav a:hover {
+color: #0096A3;
+}
 </style>
 </head>
 
 <body>
 
 <header>
-  <h1>SecuraK</h1>
+  <h1 class="brand">   <span>Secura</span><span class="brand-k">K</span> </h1>
 
 <nav>
-    <a href="#home">Home</a>
-    <a href="#services">Services</a>
-    <a href="/platform/">Platform</a>
-    <a href="#contact">Contact</a>
+  <a href="#home">Home</a>
+  <a href="platform/">Platform</a>
+  <a href="#services">Services</a>
+  <a href="#contact">Contact</a>
 </nav>
 </header>
 
 <section id="home" class="hero">
 
-  <h2>Your Security. Scaled to Your Business</h2>
+  <div class="hero-content">
 
-  <p>
-    We work with small, medium, and enterprise organizations to assess
-    vulnerabilities, secure infrastructure, and build long-term
-    cybersecurity maturity.
-  </p>
+    <div class="hero-badge">
+      CYBERSECURITY TECHNOLOGY & INCIDENT RESPONSE
+    </div>
 
-  <button onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'});">
-    Request Consultation
-  </button>
+    <h2>
+      From Threat Detection<br>
+      to <span class="hero-highlight">Incident Resolution.</span>
+    </h2>
+
+    <p>
+      SecuraK is building modern cybersecurity technology
+      to help organizations identify threats, investigate
+      security incidents, assess risk, and manage response
+      activities with greater clarity and control.
+    </p>
+
+    <div class="hero-buttons">
+
+      <button onclick="window.location.href='platform-investor-demo/'">
+        Explore Incident Command
+      </button>
+
+      <button class="secondary-button"
+        onclick="document.querySelector('#services').scrollIntoView({behavior:'smooth'});">
+        Explore Cybersecurity Services
+      </button>
+
+    </div>
+
+    <div class="hero-caption">
+      Cybersecurity Services &nbsp; | &nbsp;
+      Incident Investigation &nbsp; | &nbsp;
+      Response Management
+    </div>
+
+  </div>
 
 </section>
 
