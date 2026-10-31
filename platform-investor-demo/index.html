@@ -345,9 +345,32 @@ footer{padding:23px clamp(20px,3vw,42px)}button:focus-visible,.incident:focus-vi
 @media(max-width:380px){.metrics{grid-template-columns:1fr 1fr}.metric{padding:12px}.metric-label{font-size:9px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
 
+  .back-home-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 16px 24px;
+  padding: 10px 16px;
+  background: #15283d;
+  color: #ffffff;
+  border: 1px solid #35516a;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.back-home-btn:hover {
+  background: #1c3d50;
+  color: #7ee0cc;
+}
 </style>
 </head>
 <body>
+<a href="../" class="back-home-btn">
+  ← Back to Home
+</a>
 <div class="app">
 <aside class="sidebar">
   <div class="brand">SECURA<span>K</span></div>
