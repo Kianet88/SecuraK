@@ -19,9 +19,39 @@ header{border-bottom:1px solid var(--line);background:#071522}.nav{min-height:78
 .light{background:var(--light);color:var(--ink)}.light .eyebrow{color:#087c82}.light .section-header h2{color:var(--ink)}.light .section-header p{color:#546b76}.features{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid #c5d4d2;border-left:1px solid #c5d4d2}.feature{padding:30px 28px 34px;border-right:1px solid #c5d4d2;border-bottom:1px solid #c5d4d2;min-height:205px}.feature span{font:700 11px Manrope,sans-serif;color:#087c82}.feature h3{font:800 17px Manrope,sans-serif;letter-spacing:-.02em;margin:19px 0 9px}.feature p{font-size:13px;color:#526976;margin:0}
 .split{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:start}.split h2{margin-bottom:18px}.split p{color:var(--muted);font-size:14px}.checklist{border-top:1px solid var(--line)}.check{padding:18px 0;border-bottom:1px solid var(--line)}.check strong{display:block;color:#edf4f4;font-size:14px;margin-bottom:5px}.check p{margin:0;font-size:12px}.closing{padding:75px 0 90px;background:#12313f;border-top:1px solid #42606a}.closing-grid{display:flex;align-items:center;justify-content:space-between;gap:35px}.closing p{max-width:610px;color:#b7ccd3;font-size:14px}.footer{padding:30px 0;border-top:1px solid var(--line);color:#8faab7;font-size:12px}.footer .container{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 @media(max-width:920px){.hero-grid{gap:30px}.journey{grid-template-columns:repeat(3,1fr)}.features{grid-template-columns:repeat(2,1fr)}.split{gap:40px}}@media(max-width:680px){.container{width:min(100% - 34px,1160px)}.nav{padding:15px 0;align-items:flex-start;flex-direction:column;gap:13px}.navlinks{gap:16px;flex-wrap:wrap;font-size:12px}.hero{padding:62px 0}.hero-grid,.split{grid-template-columns:1fr}.hero h1{font-size:clamp(36px,10vw,53px)}.preview{margin-top:15px;box-shadow:none}.disclosure .container{display:block}.disclosure strong{display:block;margin-bottom:8px}.section{padding:65px 0}.section-header{display:block}.section-header p{margin-top:15px}.journey{grid-template-columns:repeat(2,1fr)}.step{min-height:175px}.features{grid-template-columns:1fr}.feature{min-height:auto}.closing-grid{display:block}.closing .actions{margin-top:24px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+.back-home-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 16px 24px;
+  padding: 10px 16px;
+  background: #15283d;
+  color: #ffffff;
+  border: 1px solid #35516a;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.back-home-btn:hover {
+  background: #1c3d50;
+  color: #7ee0cc;
+  border-color: #7ee0cc;
+}
+
+.back-home-btn:focus-visible {
+  outline: 2px solid #7ee0cc;
+  outline-offset: 3px;
+}
 </style>
 </head>
 <body>
+<a href="../" class="back-home-btn">
+  ← Back to Home
+</a>
 <header><div class="container nav"><a class="logo" href="../" aria-label="SecuraK home">Secura<span>K</span></a><nav class="navlinks" aria-label="Main navigation"><a href="../platform/">Platform overview</a><a href="#walkthrough">How it works</a><a href="../#contact">Contact</a><a class="nav-cta" href="../platform-investor-demo/">Open demo ↗</a></nav></div></header>
 <main>
 <section class="hero"><div class="container hero-grid"><div><p class="eyebrow">Incident Command / Guided product demo</p><h1>From security signal to <em>clear next steps.</em></h1><p class="lead">Explore how SecuraK Incident Command brings incident context, investigation findings, response decisions and verification into one structured workflow.</p><div class="actions"><a class="btn primary" href="../platform-investor-demo/">Launch interactive demo →</a><a class="btn secondary" href="#walkthrough">Explore the workflow ↓</a></div><p class="micro">No sign-in required · Synthetic incidents · Simulated actions only</p></div><div class="preview" aria-label="Illustrative preview of three synthetic incidents"><div class="preview-top"><strong>INCIDENT COMMAND</strong><span class="live">● DEMO MODE</span></div><div class="preview-body"><div class="preview-label">Incident workspace / sample data</div><div class="preview-title">Security incidents</div><div class="sample-row"><div><strong>Suspicious authentication activity</strong><small>SEC-2026-001 · Risk score 70</small></div><span class="badge">HIGH</span></div><div class="sample-row"><div><strong>Repeated login failures</strong><small>SEC-2026-002 · Risk score 48</small></div><span class="badge medium">MEDIUM</span></div><div class="sample-row"><div><strong>Unusual access pattern</strong><small>SEC-2026-003 · Risk score 22</small></div><span class="badge low">LOW</span></div><div class="preview-foot"><span>3 synthetic incident records</span><strong>Explore investigation →</strong></div></div></div></div></section>
