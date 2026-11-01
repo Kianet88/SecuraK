@@ -5,78 +5,693 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Contact SecuraK about cybersecurity services, Incident Command, or a product pilot.">
 <title>Contact SecuraK | Cybersecurity Services & Incident Command</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
-:root{--bg:#071522;--panel:#102537;--line:#284354;--cream:#fafad2;--teal:#5ad4d0;--text:#e8f0f4;--muted:#a9bcc8;--focus:#9cece5}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:'DM Sans',Arial,sans-serif;line-height:1.65}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}button{cursor:pointer}.container{width:min(1140px,calc(100% - 44px));margin:auto}
-header{border-bottom:1px solid var(--line)}.nav{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}.logo{font:800 25px Manrope,sans-serif;letter-spacing:-1px;color:var(--cream)}.logo span{color:var(--teal)}.nav-links{display:flex;gap:25px;flex-wrap:wrap}.nav-links a{font-size:13px;color:#c6d5dd}.nav-links a:hover,.nav-links a[aria-current]{color:var(--teal)}
-.hero{padding:92px 0 65px;border-bottom:1px solid var(--line)}.eyebrow{color:var(--teal);font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin:0 0 21px}.hero h1{font:800 clamp(42px,6.5vw,76px)/1.08 Manrope,sans-serif;letter-spacing:-.055em;color:var(--cream);max-width:840px;margin:0 0 24px}.hero h1 em{color:var(--teal);font-style:normal}.lead{font-size:17px;color:var(--muted);max-width:650px;margin:0}
-.main-grid{display:grid;grid-template-columns:minmax(260px,.78fr) minmax(0,1.22fr);gap:70px;padding:76px 0 100px}.aside h2{font:700 27px/1.25 Manrope,sans-serif;letter-spacing:-.03em;color:var(--cream);margin:0 0 16px}.aside>p{color:var(--muted);margin:0 0 35px;font-size:14px}.topic{padding:19px 0;border-top:1px solid var(--line)}.topic strong{display:block;font-size:14px;color:var(--text);margin-bottom:5px}.topic span{display:block;color:var(--muted);font-size:13px}.aside-link{display:inline-block;margin-top:26px;color:var(--teal);font-weight:700;font-size:13px}
-.form-wrap{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:clamp(22px,4vw,42px)}.form-wrap h2{font:750 25px/1.3 Manrope,sans-serif;letter-spacing:-.03em;color:var(--cream);margin:0 0 9px}.form-intro{color:var(--muted);font-size:13px;margin:0 0 28px}.fields{display:grid;grid-template-columns:1fr 1fr;gap:18px}.field{margin-bottom:19px}.field label{display:block;font-size:12px;font-weight:700;margin-bottom:8px;color:#dbe7ed}.field input,.field select,.field textarea{display:block;width:100%;border:1px solid #456074;border-radius:7px;background:#071a29;color:#fff;padding:13px 14px;outline:none}.field input::placeholder,.field textarea::placeholder{color:#849aaa}.field textarea{resize:vertical;min-height:145px}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--focus);box-shadow:0 0 0 2px rgba(90,212,208,.16)}.field select{color:#e8f0f4}.privacy{font-size:12px;color:var(--muted);margin:0 0 22px}.submit{background:var(--cream);color:#071522;border:0;border-radius:7px;padding:14px 22px;font-size:13px;font-weight:800}.submit:hover{background:#dff5d6}.submit:disabled{opacity:.65;cursor:wait}#form-status{display:none;margin-top:18px;padding:13px 15px;border-radius:7px;font-size:13px}#form-status.success{display:block;background:#103b35;border:1px solid #357a6c;color:#dcfff4}#form-status.error{display:block;background:#42242a;border:1px solid #a65761;color:#ffe1e5}
-footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:12px}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.foot-links{display:flex;gap:20px;flex-wrap:wrap}.foot a:hover{color:var(--teal)}
-@media(max-width:850px){.main-grid{grid-template-columns:1fr;gap:44px}.hero{padding:70px 0 55px}.aside>p{max-width:640px}}
-@media(max-width:560px){.nav{align-items:flex-start;flex-direction:column;padding:18px 0}.nav-links{gap:12px 19px}.fields{grid-template-columns:1fr;gap:0}.main-grid{padding:48px 0 65px}.hero h1{font-size:42px}.form-wrap{padding:22px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+:root {
+  --bg:#071522;
+  --panel:#102537;
+  --line:#284354;
+  --cream:#fafad2;
+  --teal:#5ad4d0;
+  --text:#e8f0f4;
+  --muted:#a9bcc8;
+  --focus:#9cece5;
+}
+
+* { box-sizing:border-box; }
+
+html { scroll-behavior:smooth; }
+
+body {
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  line-height:1.65;
+}
+
+a {
+  color:inherit;
+  text-decoration:none;
+}
+
+button,input,select,textarea {
+  font:inherit;
+}
+
+button { cursor:pointer; }
+
+.container {
+  width:min(1140px,calc(100% - 44px));
+  margin:auto;
+}
+
+/* NAVIGATION */
+
+header {
+  border-bottom:1px solid var(--line);
+}
+
+.nav {
+  min-height:82px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+}
+
+.logo {
+  font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  font-size:24px;
+  font-weight:850;
+  letter-spacing:-.055em;
+  color:#f5f2db;
+}
+
+.logo span {
+  color:var(--teal);
+}
+
+.nav-links {
+  display:flex;
+  gap:25px;
+  flex-wrap:wrap;
+}
+
+.nav-links a {
+  font-size:13px;
+  color:#c6d5dd;
+}
+
+.nav-links a:hover,
+.nav-links a[aria-current] {
+  color:var(--teal);
+}
+
+/* HERO */
+
+.hero {
+  padding:92px 0 65px;
+  border-bottom:1px solid var(--line);
+}
+
+.eyebrow {
+  color:var(--teal);
+  font-size:11px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  font-weight:700;
+  margin:0 0 21px;
+}
+
+.hero h1 {
+  font:800 clamp(42px,6.5vw,76px)/1.08 system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  letter-spacing:-.055em;
+  color:var(--cream);
+  max-width:840px;
+  margin:0 0 24px;
+}
+
+.hero h1 em {
+  color:var(--teal);
+  font-style:normal;
+}
+
+.lead {
+  font-size:17px;
+  color:var(--muted);
+  max-width:650px;
+  margin:0;
+}
+
+/* MAIN CONTENT */
+
+.main-grid {
+  display:grid;
+  grid-template-columns:minmax(260px,.78fr) minmax(0,1.22fr);
+  gap:70px;
+  padding:76px 0 100px;
+}
+
+.aside h2 {
+  font:700 27px/1.25 system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  letter-spacing:-.03em;
+  color:var(--cream);
+  margin:0 0 16px;
+}
+
+.aside>p {
+  color:var(--muted);
+  margin:0 0 35px;
+  font-size:14px;
+}
+
+.topic {
+  padding:19px 0;
+  border-top:1px solid var(--line);
+}
+
+.topic strong {
+  display:block;
+  font-size:14px;
+  color:var(--text);
+  margin-bottom:5px;
+}
+
+.topic span {
+  display:block;
+  color:var(--muted);
+  font-size:13px;
+}
+
+.aside-link {
+  display:inline-block;
+  margin-top:26px;
+  color:var(--teal);
+  font-weight:700;
+  font-size:13px;
+}
+
+/* CONTACT FORM */
+
+.form-wrap {
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:clamp(22px,4vw,42px);
+}
+
+.form-wrap h2 {
+  font:750 25px/1.3 system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  letter-spacing:-.03em;
+  color:var(--cream);
+  margin:0 0 9px;
+}
+
+.form-intro {
+  color:var(--muted);
+  font-size:13px;
+  margin:0 0 28px;
+}
+
+.fields {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+
+.field {
+  margin-bottom:19px;
+}
+
+.field label {
+  display:block;
+  font-size:12px;
+  font-weight:700;
+  margin-bottom:8px;
+  color:#dbe7ed;
+}
+
+.field input,
+.field select,
+.field textarea {
+  display:block;
+  width:100%;
+  border:1px solid #456074;
+  border-radius:7px;
+  background:#071a29;
+  color:#fff;
+  padding:13px 14px;
+  outline:none;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color:#849aaa;
+}
+
+.field textarea {
+  resize:vertical;
+  min-height:145px;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color:var(--focus);
+  box-shadow:0 0 0 2px rgba(90,212,208,.16);
+}
+
+.field select {
+  color:#e8f0f4;
+}
+
+.privacy {
+  font-size:12px;
+  color:var(--muted);
+  margin:0 0 22px;
+}
+
+.submit {
+  background:var(--cream);
+  color:#071522;
+  border:0;
+  border-radius:7px;
+  padding:14px 22px;
+  font-size:13px;
+  font-weight:800;
+}
+
+.submit:hover {
+  background:#dff5d6;
+}
+
+.submit:disabled {
+  opacity:.65;
+  cursor:wait;
+}
+
+#form-status {
+  display:none;
+  margin-top:18px;
+  padding:13px 15px;
+  border-radius:7px;
+  font-size:13px;
+}
+
+#form-status.success {
+  display:block;
+  background:#103b35;
+  border:1px solid #357a6c;
+  color:#dcfff4;
+}
+
+#form-status.error {
+  display:block;
+  background:#42242a;
+  border:1px solid #a65761;
+  color:#ffe1e5;
+}
+
+/* FOOTER */
+
+footer {
+  border-top:1px solid var(--line);
+  padding:30px 0;
+  color:var(--muted);
+  font-size:12px;
+}
+
+.foot {
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.foot-links {
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.foot a:hover {
+  color:var(--teal);
+}
+
+/* BACK TO HOME */
+
 .back-home-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin: 16px 24px;
-  padding: 10px 16px;
-  background: #15283d;
-  color: #ffffff;
-  border: 1px solid #35516a;
-  border-radius: 8px;
-  font-family: inherit;
-  font-size: 13px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.2s ease;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin:16px 24px;
+  padding:10px 16px;
+  background:#15283d;
+  color:#ffffff;
+  border:1px solid #35516a;
+  border-radius:8px;
+  font-family:inherit;
+  font-size:13px;
+  font-weight:600;
+  text-decoration:none;
+  transition:all .2s ease;
 }
 
 .back-home-btn:hover {
-  background: #1c3d50;
-  color: #7ee0cc;
-  border-color: #7ee0cc;
+  background:#1c3d50;
+  color:#7ee0cc;
+  border-color:#7ee0cc;
 }
 
 .back-home-btn:focus-visible {
-  outline: 2px solid #7ee0cc;
-  outline-offset: 3px;
+  outline:2px solid #7ee0cc;
+  outline-offset:3px;
+}
+
+/* MOBILE */
+
+@media(max-width:850px) {
+  .main-grid {
+    grid-template-columns:1fr;
+    gap:44px;
+  }
+
+  .hero {
+    padding:70px 0 55px;
+  }
+
+  .aside>p {
+    max-width:640px;
+  }
+}
+
+@media(max-width:560px) {
+  .nav {
+    align-items:flex-start;
+    flex-direction:column;
+    padding:18px 0;
+  }
+
+  .nav-links {
+    gap:12px 19px;
+  }
+
+  .fields {
+    grid-template-columns:1fr;
+    gap:0;
+  }
+
+  .main-grid {
+    padding:48px 0 65px;
+  }
+
+  .hero h1 {
+    font-size:42px;
+  }
+
+  .form-wrap {
+    padding:22px;
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  html {
+    scroll-behavior:auto;
+  }
 }
 </style>
 </head>
+
 <body>
+
 <a href="../" class="back-home-btn">
   ← Back to Home
 </a>
-<header><div class="container nav"><a class="logo" href="../" aria-label="SecuraK homepage">Secura<span>K</span></a><nav class="nav-links" aria-label="Main navigation"><a href="../">Home</a><a href="../platform/">Platform</a><a href="../services/">Services</a><a href="../platform-demo/">Product Demo</a><a href="./" aria-current="page">Contact</a></nav></div></header>
+
+<header>
+  <div class="container nav">
+
+    <a class="logo" href="../" aria-label="SecuraK homepage">
+      Secura<span>K</span>
+    </a>
+
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="../">Home</a>
+      <a href="../platform/">Platform</a>
+      <a href="../services/">Services</a>
+      <a href="../platform-demo/">Product Demo</a>
+      <a href="./" aria-current="page">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
 <main>
-<section class="hero"><div class="container"><p class="eyebrow">Contact SecuraK</p><h1>Let's talk about <em>what comes next.</em></h1><p class="lead">Whether you're reviewing your security posture, preparing for an incident, or exploring Incident Command, tell us what you're working on.</p></div></section>
+
+<section class="hero">
+  <div class="container">
+
+    <p class="eyebrow">Contact SecuraK</p>
+
+    <h1>
+      Let's talk about <em>what comes next.</em>
+    </h1>
+
+    <p class="lead">
+      Whether you're reviewing your security posture,
+      preparing for an incident, or exploring Incident Command,
+      tell us what you're working on.
+    </p>
+
+  </div>
+</section>
+
 <div class="container main-grid">
-<aside class="aside"><p class="eyebrow">Start a conversation</p><h2>The right discussion starts with your priorities.</h2><p>Share a little about your organization and the challenge you're looking to address. We'll use your message to understand your request and follow up.</p>
-<div class="topic"><strong>Cybersecurity services</strong><span>Vulnerability assessments, authorized penetration testing, and incident response support.</span></div>
-<div class="topic"><strong>Incident Command</strong><span>Explore the current synthetic demonstration and discuss product direction.</span></div>
-<div class="topic"><strong>Pilot or partnership inquiry</strong><span>Discuss a potential pilot, collaboration, or a question about SecuraK.</span></div>
-<a class="aside-link" href="../platform-demo/">Explore the product demonstration →</a>
-</aside>
-<section class="form-wrap" aria-labelledby="form-title"><h2 id="form-title">Request a conversation</h2><p class="form-intro">Fields marked * are required.</p>
-<form id="quote-form" action="https://formspree.io/f/xwlpbzpz" method="POST">
-<div class="fields"><div class="field"><label for="name">Your name *</label><input id="name" name="name" autocomplete="name" required placeholder="Full name"></div><div class="field"><label for="email">Email address *</label><input id="email" name="email" type="email" autocomplete="email" required placeholder="you@company.com"></div></div>
-<div class="field"><label for="organization">Organization (optional)</label><input id="organization" name="organization" autocomplete="organization" placeholder="Company or organization"></div>
-<div class="field"><label for="interest">What can we help with? *</label><select id="interest" name="interest" required><option value="" selected disabled>Select a topic</option><option value="Vulnerability assessment">Vulnerability assessment</option><option value="Penetration testing">Penetration testing</option><option value="Incident response">Incident response</option><option value="Incident Command demo">Incident Command demo</option><option value="Pilot or partnership">Pilot or partnership</option><option value="General inquiry">General inquiry</option></select></div>
-<div class="field"><label for="message">Your message *</label><textarea id="message" name="message" required placeholder="Tell us about your goals, questions, or timeline."></textarea></div>
-<input type="hidden" name="_subject" value="New SecuraK Website Inquiry"><div aria-hidden="true" style="position:absolute;left:-10000px"><label for="gotcha">Leave this blank</label><input id="gotcha" type="text" name="_gotcha" tabindex="-1" autocomplete="off"></div>
-<p class="privacy">Please don't include passwords, credentials, sensitive incident evidence, or confidential customer data in this form.</p><button class="submit" type="submit">Send inquiry →</button><div id="form-status" role="status" aria-live="polite"></div>
-</form></section>
+
+  <aside class="aside">
+
+    <p class="eyebrow">Start a conversation</p>
+
+    <h2>
+      The right discussion starts with your priorities.
+    </h2>
+
+    <p>
+      Share a little about your organization and the challenge
+      you're looking to address. We'll use your message to
+      understand your request and follow up.
+    </p>
+
+    <div class="topic">
+      <strong>Cybersecurity services</strong>
+      <span>
+        Vulnerability assessments, authorized penetration testing,
+        and incident response support.
+      </span>
+    </div>
+
+    <div class="topic">
+      <strong>Incident Command</strong>
+      <span>
+        Explore Incident Command and discuss product direction.
+      </span>
+    </div>
+
+    <div class="topic">
+      <strong>Pilot or partnership inquiry</strong>
+      <span>
+        Discuss a potential pilot, collaboration,
+        or a question about SecuraK.
+      </span>
+    </div>
+
+    <a class="aside-link" href="../platform-demo/">
+      Explore the product demonstration →
+    </a>
+
+  </aside>
+
+  <section class="form-wrap" aria-labelledby="form-title">
+
+    <h2 id="form-title">Request a conversation</h2>
+
+    <p class="form-intro">
+      Fields marked * are required.
+    </p>
+
+    <form
+      id="quote-form"
+      action="https://formspree.io/f/xwlpbzpz"
+      method="POST"
+    >
+
+      <div class="fields">
+
+        <div class="field">
+          <label for="name">Your name *</label>
+          <input
+            id="name"
+            name="name"
+            autocomplete="name"
+            required
+            placeholder="Full name"
+          >
+        </div>
+
+        <div class="field">
+          <label for="email">Email address *</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            autocomplete="email"
+            required
+            placeholder="you@company.com"
+          >
+        </div>
+
+      </div>
+
+      <div class="field">
+        <label for="organization">Organization (optional)</label>
+        <input
+          id="organization"
+          name="organization"
+          autocomplete="organization"
+          placeholder="Company or organization"
+        >
+      </div>
+
+      <div class="field">
+        <label for="interest">What can we help with? *</label>
+
+        <select id="interest" name="interest" required>
+          <option value="" selected disabled>Select a topic</option>
+          <option value="Vulnerability assessment">Vulnerability assessment</option>
+          <option value="Penetration testing">Penetration testing</option>
+          <option value="Incident response">Incident response</option>
+          <option value="Incident Command demo">Incident Command demo</option>
+          <option value="Pilot or partnership">Pilot or partnership</option>
+          <option value="General inquiry">General inquiry</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="message">Your message *</label>
+        <textarea
+          id="message"
+          name="message"
+          required
+          placeholder="Tell us about your goals, questions, or timeline."
+        ></textarea>
+      </div>
+
+      <input
+        type="hidden"
+        name="_subject"
+        value="New SecuraK Website Inquiry"
+      >
+
+      <div
+        aria-hidden="true"
+        style="position:absolute;left:-10000px"
+      >
+        <label for="gotcha">Leave this blank</label>
+        <input
+          id="gotcha"
+          type="text"
+          name="_gotcha"
+          tabindex="-1"
+          autocomplete="off"
+        >
+      </div>
+
+      <p class="privacy">
+        Please don't include passwords, credentials,
+        sensitive incident evidence, or confidential
+        customer data in this form.
+      </p>
+
+      <button class="submit" type="submit">
+        Send inquiry →
+      </button>
+
+      <div
+        id="form-status"
+        role="status"
+        aria-live="polite"
+      ></div>
+
+    </form>
+
+  </section>
+
 </div>
+
 </main>
-<footer><div class="container foot"><span>© 2026 SecuraK. Cybersecurity services & technology.</span><div class="foot-links"><a href="../services/">Services</a><a href="../platform/">Incident Command</a><a href="https://www.instagram.com/secura.k" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://www.linkedin.com/company/securak/" target="_blank" rel="noopener noreferrer">LinkedIn</a></div></div></footer>
+
+<footer>
+  <div class="container foot">
+
+    <span>
+      © 2026 SecuraK. Cybersecurity services & technology.
+    </span>
+
+    <div class="foot-links">
+      <a href="../services/">Services</a>
+      <a href="../platform/">Incident Command</a>
+
+      <a
+        href="https://www.instagram.com/secura.k"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Instagram
+      </a>
+
+      <a
+        href="https://www.linkedin.com/company/securak/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        LinkedIn
+      </a>
+    </div>
+
+  </div>
+</footer>
+
 <script>
-const form=document.getElementById('quote-form');const statusMessage=document.getElementById('form-status');const submitButton=form.querySelector('button[type="submit"]');
-form.addEventListener('submit',async event=>{event.preventDefault();statusMessage.className='';statusMessage.style.display='block';statusMessage.textContent='Sending your inquiry…';submitButton.disabled=true;const formData=new FormData(form);try{const response=await fetch(form.action,{method:'POST',body:formData,headers:{Accept:'application/json'}});if(response.ok){statusMessage.className='success';statusMessage.textContent='Thank you. Your inquiry has been sent successfully.';form.reset()}else{let result={};try{result=await response.json()}catch{}statusMessage.className='error';statusMessage.textContent=result.errors?.[0]?.message||'Your message could not be sent. Please try again.'}}catch{statusMessage.className='error';statusMessage.textContent='Unable to send your inquiry right now. Please try again later.'}finally{submitButton.disabled=false}});
+const form = document.getElementById('quote-form');
+const statusMessage = document.getElementById('form-status');
+const submitButton = form.querySelector('button[type="submit"]');
+
+form.addEventListener('submit', async event => {
+  event.preventDefault();
+
+  statusMessage.className = '';
+  statusMessage.style.display = 'block';
+  statusMessage.textContent = 'Sending your inquiry…';
+  submitButton.disabled = true;
+
+  const formData = new FormData(form);
+
+  try {
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: formData,
+      headers: {
+        Accept: 'application/json'
+      }
+    });
+
+    if (response.ok) {
+      statusMessage.className = 'success';
+      statusMessage.textContent =
+        'Thank you. Your inquiry has been sent successfully.';
+      form.reset();
+    } else {
+      let result = {};
+
+      try {
+        result = await response.json();
+      } catch {}
+
+      statusMessage.className = 'error';
+      statusMessage.textContent =
+        result.errors?.[0]?.message ||
+        'Your message could not be sent. Please try again.';
+    }
+  } catch {
+    statusMessage.className = 'error';
+    statusMessage.textContent =
+      'Unable to send your inquiry right now. Please try again later.';
+  } finally {
+    submitButton.disabled = false;
+  }
+});
 </script>
+
 </body>
 </html>
